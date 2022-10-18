@@ -1,0 +1,75 @@
+#background_img2
+{
+    width: 1440px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../img/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+input
+{
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 50px;
+
+    padding: 10px;
+    margin-top: 20px;
+
+    border: none;
+    
+
+    border-radius: 10px;
+}
+
+input:focus {
+    background-color: #e4e4e4;
+  }
+
+button
+{
+    border: 1px solid #FFFFFF;
+    background-color: #272727;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.btn_confirm:hover
+{
+    border: 2px solid #272727;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    color: #272727;
+}
+
+.form_login
+{
+    width: 300px;
+    height: 300px;
+}
+
+.form_block
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
