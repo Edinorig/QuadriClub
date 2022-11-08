@@ -1,3 +1,6 @@
+<?php
+include_once("../common/php/dbConnector.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,79 +56,44 @@
     </div>
 
     <main>
-    <div class="global_block">
+        <div class="global_block">
 
+            <?php
+            $searchTerm = ""; //TODO barra di ricerca
+            $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.privata = 'n' AND op.titolo LIKE '%" . $searchTerm . "%';";
+            //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
+            $rec = mysqli_query($dbGdA, $query) or die($query);
+            if (mysqli_num_rows($rec) > 0) {
+                for ($itemNum = 0; $currentRecord = mysqli_fetch_array($rec); $itemNum++) {
+                    echo "
+                    <div class=\"main_block\">
+                    
+                        <div class=\"main_block_card\">
+                            <div class=\"main_block_card_logo\">
+                                <p class=\"card_logo\">" . $currentRecord["titolo"] . "</p>
+                            </div>
+                            <div class=\"main_block_card_body\">
+                                <div class=\"main_block_card_body_painting\">
+                                    <img src=\"../common/" . $currentRecord["path"] . "\" alt=\"\">
+                                </div>
+                                <div class=\"main_block_card_body_info\">
+                                    <div class=\"main_block_card_body_info_description\">
+                                        <p class=\"card_description\">" . $currentRecord["descrizione"] . "</p>
+                                    </div>
+                                    <div class=\"main_block_card_body_info_author\">
+                                        <p class=\"card_author\">" . $currentRecord["autore"] . "</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </div>
+                    ";
+                }
+            }
+            ?>
 
-<div class="main_block">
-
-    <div class="main_block_card">
-        <div class="main_block_card_logo">
-            <p class="card_logo"> Kebab on the wheel</p>
         </div>
-        <div class="main_block_card_body">
-            <div class="main_block_card_body_painting">
-                <img src="../common/foto/MainNotteFHD.jpg" alt="">
-            </div>
-            <div class="main_block_card_body_info">
-                <div class="main_block_card_body_info_description">
-                    <p class="card_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                </div>
-                <div class="main_block_card_body_info_author">
-                    <p class="card_author">Davinci_Italia</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="main_block">
-
-    <div class="main_block_card">
-        <div class="main_block_card_logo">
-            <p class="card_logo"> Kebab on the wheel</p>
-        </div>
-        <div class="main_block_card_body">
-            <div class="main_block_card_body_painting">
-                <img src="../common/foto/vidomi-kartyni11.jpg" alt="">
-            </div>
-            <div class="main_block_card_body_info">
-                <div class="main_block_card_body_info_description">
-                    <p class="card_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                </div>
-                <div class="main_block_card_body_info_author">
-                    <p class="card_author">Davinci_Italia</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<div class="main_block">
-
-    <div class="main_block_card">
-        <div class="main_block_card_logo">
-            <p class="card_logo"> Kebab on the wheel</p>
-        </div>
-        <div class="main_block_card_body">
-            <div class="main_block_card_body_painting">
-                <img src="../common/foto/vincent_van_gogh_wheat_field_with_cypresses_wheat_fields_120692_1920x1080.jpg" alt="">
-            </div>
-            <div class="main_block_card_body_info">
-                <div class="main_block_card_body_info_description">
-                    <p class="card_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                </div>
-                <div class="main_block_card_body_info_author">
-                    <p class="card_author">Davinci_Italia</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-</div>
     </main>
 
     <?php include '../common/php/footer.php'; ?>
