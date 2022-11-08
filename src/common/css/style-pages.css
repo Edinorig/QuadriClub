@@ -1,0 +1,25 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* --------------------------------------------------IMG SLIDER-------------------------------------------------- */
+.background-img1{
+    width: 1440px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../foto/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wrapper-slides-information{
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

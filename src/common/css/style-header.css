@@ -1,0 +1,25 @@
+header
+{
+    display: flex;
+    justify-content: center;
+
+    margin: 10px;
+}
+
+
+.wrapper-nav-bar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1200px;
+}
+
+.wrapper-navigation-menu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
