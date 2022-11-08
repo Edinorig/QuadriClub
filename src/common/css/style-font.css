@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
+
+p {
+    font-family: 'Dosis';
+    font-style: normal;
+
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color:#1d1d1d;
+}
+
+.logo {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.navigation-menu {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+
+    padding: 5px;
+}
+/*  ----------------------------------------------------SLIDER------------------------------------------- */
+
+.slider-main-info{
+    color: white;
+    font-weight: normal;
+    font-weight: 500;
+    font-size: 27px;
+}
+
+.slider-secondary-info
+{
+    color: white;
+    font-weight: normal;
+    font-weight: 300;
+    font-size: 17px;
+}
+/*  ----------------------------------------------------CARDS------------------------------------------- */
+
+.card_logo {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    padding: 6px;
+    margin-left: 20px;
+    color: #272727;
+}
+
+/*  ----------------------------------------------------CONTACTUS------------------------------------------- */
+
+
+.btn_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    font-weight: normal;
+    font-weight: 300;
+    font-size: 17px;
+
+/*  ----------------------------------------------------FOOTER------------------------------------------- */
+.footer-info
+{
+    padding: 10px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
