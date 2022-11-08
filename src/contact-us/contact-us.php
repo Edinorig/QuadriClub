@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-header.css">
     <link rel="stylesheet" href="../common/css/style-footer.css">
+    <script src="javascript/submitForm.js"></script>
+    <script src="../common/lib/alertify/alertify.js"></script>
+    <script src="../common/lib/alertify/alertify.min.js"></script>
+    <link rel="stylesheet" href="../common/lib/alertify/css/alertify.min.css" />
+    <link rel="stylesheet" href="../common/lib/alertify/css/themes/default.min.css" />
     <title>Contact US</title>
 </head>
 
 <body>
-
-
     <div class="wrapper-header-bacground-img">
         <div class="background-img1">
             <header>
@@ -35,10 +38,9 @@
         </div>
         <div class="form_block">
 
-            <form action="" class="form_contactUs">
-
-                <input type="text" placeholder="Input Poblem" name="login" class="input_contactUs_problem">
-                <textarea name="problem_description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Descript problem"></textarea>
+            <form onSubmit="return submitForm(<?php echo isset($_SESSION['userEmail']) ?>)" class="form_contactUs">
+                <input type="text" placeholder="Insert your reason for contacting us here..." name="reason" class="input_contactUs_problem">
+                <textarea name="description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Add details and information about your situation here..."></textarea>
                 <button class="btn_confirm" type="submit">
                     <p class="btn_text">Send</p>
                 </button>
@@ -46,9 +48,6 @@
 
         </div>
     </div>
-
-
-
     <?php include '../common/php/footer.php'; ?>
 </body>
 

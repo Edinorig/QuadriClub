@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0px;
     padding: 0px;
 }
@@ -6,17 +6,17 @@ body{
 
 
 /* --------------------------------------------------IMG SLIDER-------------------------------------------------- */
-.background-img1{
+.background-img1 {
     width: 1440px;
     height: 800px;
     background-size: cover;
-    background-image: url('../foto/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
+    background-image: url('../images/field.jpg');
     display: flex;
     flex-direction: column;
 }
 
 
-.wrapper-slides-information{
+.wrapper-slides-information {
     display: flex;
     height: 50%;
     flex-direction: column;
