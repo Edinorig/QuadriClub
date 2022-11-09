@@ -11,7 +11,7 @@ button {
     height: 50px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     cursor: pointer;
 }
 
@@ -34,14 +34,11 @@ p {
 
 footer {
     margin-top: 40px;
-    
-    width: auto;
+    width: 1440px;
     height: 100px;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
-
     background-color: #272727;
 }
 
@@ -55,4 +52,34 @@ header {
 
     display: flex;
     justify-content: center;
+}
+
+
+
+a:hover {
+    text-decoration: underline;
+    color: #c1c1c1;
+}
+
+input:focus {
+    background-color: #e4e4e4;
+
+}
+
+
+#background_img2 {
+    width: 1440px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../../common/img/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

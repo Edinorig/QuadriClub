@@ -1,13 +1,3 @@
-#background_img2 {
-    width: 1440px;
-    height: 800px;
-    background-size: cover;
-    background-image: url('../img/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
-    display: flex;
-    flex-direction: column;
-}
-
-
 .form_login {
     width: 300px;
     height: 100px;

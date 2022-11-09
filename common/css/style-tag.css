@@ -176,6 +176,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .panel:hover {
@@ -225,4 +227,17 @@
     flex-direction: row;
     width: 500px;
     justify-content: space-between;
+}
+
+
+.wrapper-privare-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+
+.price{
+    display: flex;
 }
