@@ -1,0 +1,83 @@
+#background_img2 {
+    width: 1440px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../img/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form_login {
+    width: 300px;
+    height: 100px;
+}
+
+#input_password,
+#input_login {
+    box-sizing: border-box;
+
+    width: 300px;
+    height: 50px;
+
+    padding: 10px;
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+}
+
+#toggle_password {
+    background: url("../img/icons/hidden (1).png");
+    background-size: 20px;
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+
+    padding: none;
+    padding: 10px;
+
+    width: 280px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c1c1c1;
+}
+
+input:focus {
+    background-color: #e4e4e4;
+
+}
+
+
+.btn_confirm:hover {
+    border: 2px solid #272727;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    color: #272727;
+}
+
+.form_login {
+    width: 300px;
+    height: 300px;
+}
+
+.form_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.login_img {
+
+    width: 30px;
+}
