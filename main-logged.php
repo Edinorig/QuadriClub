@@ -132,6 +132,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="wrapper-privare-info">
+                    <div class="price"></div>
+                    <div class="status-quadro"></div>
+                </div>
 
             </div>
         </div>
