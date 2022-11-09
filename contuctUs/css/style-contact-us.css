@@ -1,0 +1,20 @@
+
+
+.input_contactUs_problem
+{
+    width: 800px;
+    height: 40px;
+    border: none;
+}
+
+.input_contactUs_description
+{
+    width: 800px;
+    height: 300px;
+
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 5px;
+
+    border: none;
+}
