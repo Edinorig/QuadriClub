@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
+    <link rel="shortcut icon" href="../common/img/icons/icon-logo.png"/>
 
     <title>Prenota</title>
 </head>
@@ -34,6 +35,9 @@
             <div class="main_block">
 
                 <div class="main_block_card">
+                    <div class="main_block_card_logo">
+                        <p class="card_logo_prenota"> Kebab on the wheel</p>
+                    </div>
 
                     <div class="wrapper-body">
                         <div class="main_block_card_body">
@@ -51,7 +55,7 @@
                         </div>
                         <div class="wrapper-privare-info">
                             <div class="cancella-quadro">
-                            <button class="btn_cancella" type="submit">
+                                <button class="btn_cancella" type="submit">
                                     <p class="btn_text">Cancella</p>
                                 </button>
                             </div>

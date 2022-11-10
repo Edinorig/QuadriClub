@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./common/css/style-font.css">
     <link rel="stylesheet" href="./common/css/style.css">
     <link rel="stylesheet" href="./common/css/style-tag.css">
+    <link rel="shortcut icon" href="./common/img/icons/icon-logo.png"/>
     <title>Quadri Club</title>
 </head>
 
@@ -160,9 +161,6 @@
             <p class="footer_info">Telefono: +39 123 324 4759</p>
         </div>
     </footer>
-
-    <script src="js/index.js"></script>
-
 </body>
 
 </html>

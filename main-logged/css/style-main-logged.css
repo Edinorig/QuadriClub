@@ -5,14 +5,13 @@
     height: 50px;
     border-radius: 10px;
     text-align: center;
-    /* margin-top: 50px; */
-    cursor: pointer;
+    cursor: auto;
+    font-weight: 300;
+    font-size: 17px;
 }
 
-.wrapper-body{
+.wrapper-body {
     display: flex;
     flex-direction: column;
     align-self: center;
 }
-
-

@@ -49,12 +49,9 @@ img {
 
 header {
     height: 800px;
-
     display: flex;
     justify-content: center;
 }
-
-
 
 a:hover {
     text-decoration: underline;
@@ -63,21 +60,18 @@ a:hover {
 
 input:focus {
     background-color: #e4e4e4;
-
 }
-
 
 #background_img2 {
     width: 1440px;
     height: 800px;
     background-size: cover;
-    background-image: url('../../common/img/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.2)), url(../../common/img/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg);
     display: flex;
     flex-direction: column;
 }
 
-
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
