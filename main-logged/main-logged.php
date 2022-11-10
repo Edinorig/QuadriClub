@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="stylesheet" href="./css/style-main-logged.css">
+    <link rel="shortcut icon" href="../common/img/icons/icon-logo.png"/>
 
     <title>Quadri Club</title>
 </head>
@@ -95,11 +96,9 @@
                             <p>Price 15$</p>
                         </div>
                         <div class="status-quadro">
-                            <a href="../prenota-quadro/prenota-quadro.php">
-                            <button class="btn_confirm" type="submit">
+                            <button class="btn_confirm_quadro" type="submit">
                                 <p class="btn_text">Prenota</p>
                             </button>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -191,9 +190,6 @@
             <p class="footer_info">Telefono: +39 123 324 4759</p>
         </div>
     </footer>
-
-    <script src="js/index.js"></script>
-
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
-
+textarea,
+input,
 p {
     font-family: 'Dosis';
     font-style: normal;
@@ -11,8 +12,7 @@ p {
     font-size: 30px;
 }
 
-.header_first_inf
-{
+.header_first_inf {
     color: white;
     font-weight: normal;
     font-weight: 500;
@@ -20,14 +20,12 @@ p {
 }
 
 .nav_bar_info {
-
     color: white;
     font-weight: 400;
     font-size: 20px;
 }
 
-.header_second_inf
-{
+.header_second_inf {
     color: white;
     font-weight: normal;
     font-weight: 300;
@@ -38,10 +36,8 @@ p {
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
-
     padding: 6px;
     margin-left: 20px;
-
     color: #272727;
 }
 
@@ -57,7 +53,6 @@ p {
     font-weight: 200;
     font-size: 16px;
     line-height: 27px;
-
     padding: 10px;
     color: #272727;
 }
@@ -67,8 +62,7 @@ p {
     color: white;
 }
 
-.btn_text
-{
+.btn_text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,12 +72,11 @@ p {
     font-weight: 300;
     font-size: 17px;
 }
-.btn_text:hover
-{
+
+.btn_text:hover {
     color: #272727;
 }
 
-
-.name-filtr{
+.name-filtr {
     font-size: 25px;
 }
