@@ -13,6 +13,9 @@ include_once("../common/php/dbConnector.php");
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-header.css">
     <link rel="stylesheet" href="../common/css/style-footer.css">
+    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../common/css/style-tag.css">
+    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <title>Main</title>
 </head>
 
@@ -55,17 +58,35 @@ include_once("../common/php/dbConnector.php");
         </div>
     </div>
 
-    <main>
-        <div class="global_block">
+    <div class="global_block">
 
-            <?php
-            $searchTerm = ""; //TODO barra di ricerca
-            $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.privata = 'n' AND op.titolo LIKE '%" . $searchTerm . "%';";
-            //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
-            $rec = mysqli_query($dbGdA, $query) or die($query);
-            if (mysqli_num_rows($rec) > 0) {
-                for ($itemNum = 0; $currentRecord = mysqli_fetch_array($rec); $itemNum++) {
-                    echo "
+        <div class="wrapper-filtr">
+            <div class="block-filtr">
+                <p class="name-filtr">Filtr</p>
+
+                <div class="nav-bar-filtr">
+                    <div class="filtr-category">
+                        <p>Nazionalita</p>
+                    </div>
+                    <div class="filtr-category">
+                        <p>Autore</p>
+                    </div>
+                    <div class="filtr-category">
+                        <p>Ordine</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <?php
+        $searchTerm = ""; //TODO barra di ricerca
+        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.privata = 'n' AND op.titolo LIKE '%" . $searchTerm . "%';";
+        //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
+        $rec = mysqli_query($dbGdA, $query) or die($query);
+        if (mysqli_num_rows($rec) > 0) {
+            for ($itemNum = 0; $currentRecord = mysqli_fetch_array($rec); $itemNum++) {
+                echo "
                     <div class=\"main_block\">
                     
                         <div class=\"main_block_card\">
@@ -89,12 +110,20 @@ include_once("../common/php/dbConnector.php");
                         </div>
                     </div>
                     ";
-                }
             }
-            ?>
+        }
+        ?>
 
+    </div>
+
+    <div class="wrapper-panel">
+        <div class="panel">
+            <p>Prev</p>
         </div>
-    </main>
+        <div class="panel">
+            <p>Next</p>
+        </div>
+    </div>
 
     <?php include '../common/php/footer.php'; ?>
 
