@@ -20,7 +20,6 @@ include_once("../common/php/dbConnector.php");
 </head>
 
 <body>
-
     <div class="wrapper-header-bacground-img">
         <div class="background-img1">
             <header>
