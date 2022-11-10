@@ -27,12 +27,12 @@ include_once("../common/php/dbConnector.php");
                     </div>
                     <div class="wrapper-navigation-menu">
                         <div class="navigation-menu">
-                            <a href="../contact-us/contact-us.php">
+                            <a href="../contactUs/contactUs.php">
                                 <p>Contact Us</p>
                             </a>
                         </div>
                         <div class="navigation-menu">
-                            <a href="../login.php/login.php">
+                            <a href="../login/login.php">
                                 <p>Login</p>
                             </a>
                         </div>

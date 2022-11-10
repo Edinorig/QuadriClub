@@ -7,13 +7,13 @@ p {
     margin: 0px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-a:hover{
-    color:#1d1d1d;
+a:hover {
+    color: #1d1d1d;
 }
 
 .logo {
@@ -29,22 +29,23 @@ a:hover{
 
     padding: 5px;
 }
+
 /*  ----------------------------------------------------SLIDER------------------------------------------- */
 
-.slider-main-info{
+.slider-main-info {
     color: white;
     font-weight: normal;
     font-weight: 500;
     font-size: 27px;
 }
 
-.slider-secondary-info
-{
+.slider-secondary-info {
     color: white;
     font-weight: normal;
     font-weight: 300;
     font-size: 17px;
 }
+
 /*  ----------------------------------------------------CARDS------------------------------------------- */
 
 .card_logo {
@@ -68,10 +69,10 @@ a:hover{
     font-weight: normal;
     font-weight: 300;
     font-size: 17px;
+}
 
 /*  ----------------------------------------------------FOOTER------------------------------------------- */
-.footer-info
-{
+.footer-info {
     padding: 10px;
     color: white;
 
