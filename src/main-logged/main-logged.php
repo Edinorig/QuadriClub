@@ -31,7 +31,7 @@ include_once("../common/php/dbConnector.php");
                         </div>
                         <div class="nav_bar_block_menu">
                             <div class="nav_bar_menu">
-                                <p class="nav_bar_info"><a href="../contact-us/contact-us.php"> ContactUs </a></p>
+                                <p class="nav_bar_info"><a href="../contact-us/contagitct-us.php"> ContactUs </a></p>
                             </div>
                             <div class="nav_bar_menu">
                                 <p class="nav_bar_info"><a href="../login/login.php">LogIn</a></p>
