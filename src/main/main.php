@@ -27,7 +27,7 @@ include_once("../common/php/dbConnector.php");
                     </div>
                     <div class="wrapper-navigation-menu">
                         <div class="navigation-menu">
-                            <a href="../contactUs/contactUs.php">
+                            <a href="../contact-us/contact-us.php">
                                 <p>Contact Us</p>
                             </a>
                         </div>

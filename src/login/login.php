@@ -24,7 +24,7 @@
                 </div>
                 <div class="nav_bar_block_menu">
                     <div class="nav_bar_menu">
-                        <p class="nav_bar_info"><a href="../.git./index.php">Exit</a></p>
+                        <p class="nav_bar_info"><a href="../../index.php">Exit</a></p>
                     </div>
                 </div>
             </div>

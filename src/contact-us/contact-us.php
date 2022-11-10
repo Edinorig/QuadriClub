@@ -28,7 +28,7 @@
                     </div>
                     <div class="wrapper-navigation-menu">
                         <div class="navigation-menu">
-                            <a href="../contact-us/contact-us.php">
+                            <a href="../../index.php">
                                 <p>Exit</p>
                             </a>
                         </div>
