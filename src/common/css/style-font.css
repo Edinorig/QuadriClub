@@ -1,36 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
-textarea,
-input,
+
 p {
     font-family: 'Dosis';
     font-style: normal;
+
+    margin: 0px;
 }
 
-.nav_bar_logo {
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #1d1d1d;
+}
+
+.logo {
     color: white;
     font-weight: 600;
     font-size: 30px;
 }
 
-.header_first_inf {
+.navigation-menu {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+
+    padding: 5px;
+}
+
+/*  ----------------------------------------------------SLIDER------------------------------------------- */
+
+.slider-main-info {
     color: white;
     font-weight: normal;
     font-weight: 500;
     font-size: 27px;
 }
 
-.nav_bar_info {
-    color: white;
-    font-weight: 400;
-    font-size: 20px;
-}
-
-.header_second_inf {
+.slider-secondary-info {
     color: white;
     font-weight: normal;
     font-weight: 300;
     font-size: 17px;
 }
+
+/*  ----------------------------------------------------CARDS------------------------------------------- */
 
 .card_logo {
     font-weight: 400;
@@ -41,26 +57,8 @@ p {
     color: #272727;
 }
 
-.card_description {
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 27px;
-    padding: 10px;
-    color: #272727;
-}
+/*  ----------------------------------------------------CONTACTUS------------------------------------------- */
 
-.card_author {
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 27px;
-    padding: 10px;
-    color: #272727;
-}
-
-.footer_info {
-    padding: 10px;
-    color: white;
-}
 
 .btn_text {
     display: flex;
@@ -73,10 +71,11 @@ p {
     font-size: 17px;
 }
 
-.btn_text:hover {
-    color: #272727;
-}
+/*  ----------------------------------------------------FOOTER------------------------------------------- */
+.footer-info {
+    padding: 10px;
+    color: white;
 
-.name-filtr {
-    font-size: 25px;
+    display: flex;
+    align-items: center;
 }

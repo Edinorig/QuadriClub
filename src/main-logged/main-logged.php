@@ -1,3 +1,6 @@
+<?php
+include_once("../common/php/dbConnector.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,22 +8,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="./css/style-main.css">
+    <link rel="stylesheet" href="../common/css/style-pages.css">
     <link rel="stylesheet" href="../common/css/style-font.css">
+    <link rel="stylesheet" href="../common/css/style-header.css">
+    <link rel="stylesheet" href="../common/css/style-footer.css">
+    <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
+    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <link rel="stylesheet" href="./css/style-main-logged.css">
-    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png"/>
-
     <title>Quadri Club</title>
 </head>
 
 <body>
-
-
     <header>
         <div class="background_img fade">
             <div id="background_img1">
-
                 <div class="nav_bar_block">
                     <div class="nav_bar">
                         <div class="nav_bar_block_logo">
@@ -28,7 +31,7 @@
                         </div>
                         <div class="nav_bar_block_menu">
                             <div class="nav_bar_menu">
-                                <p class="nav_bar_info"><a href="../contuctUs/contuctUs.php"> ContactUs </a></p>
+                                <p class="nav_bar_info"><a href="../contact-us/contagitct-us.php"> ContactUs </a></p>
                             </div>
                             <div class="nav_bar_menu">
                                 <p class="nav_bar_info"><a href="../login/login.php">LogIn</a></p>
@@ -36,7 +39,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="background_main_block">
                     <p class="header_first_inf">QuadriClub</p>
                     <br>
@@ -44,9 +46,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </header>
 
     <div class="global_block">
@@ -71,105 +70,40 @@
         </div>
 
 
-        <div class="main_block">
-
-            <div class="main_block_card">
-                <div class="main_block_card_logo">
-                    <p class="card_logo"> Kebab on the wheel</p>
-                </div>
-                <div class="wrapper-body">
-                    <div class="main_block_card_body">
-                        <div class="main_block_card_body_painting">
-                            <img src="../common/images/quadri/vidomi-kartyni11.jpg" alt="">
-                        </div>
-                        <div class="main_block_card_body_info">
-                            <div class="main_block_card_body_info_description">
-                                <p class="card_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+        <?php
+        $searchTerm = ""; //TODO barra di ricerca
+        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.titolo LIKE '%" . $searchTerm . "%';";
+        //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
+        $rec = mysqli_query($dbGdA, $query) or die($query);
+        if (mysqli_num_rows($rec) > 0) {
+            for ($itemNum = 0; $currentRecord = mysqli_fetch_array($rec); $itemNum++) {
+                echo "
+                    <div class=\"main_block\">
+                    
+                        <div class=\"main_block_card\">
+                            <div class=\"main_block_card_logo\">
+                                <p class=\"card_logo\">" . $currentRecord["titolo"] . "</p>
                             </div>
-                            <div class="main_block_card_body_info_author">
-                                <p class="card_author">Davinci_Italia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wrapper-privare-info">
-                        <div class="price">
-                            <p>Price 15$</p>
-                        </div>
-                        <div class="status-quadro">
-                            <button class="btn_confirm_quadro" type="submit">
-                                <p class="btn_text">Prenota</p>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="main_block">
-
-            <div class="main_block_card">
-                <div class="main_block_card_logo">
-                    <p class="card_logo"> Kebab on the wheel</p>
-                </div>
-                <div class="wrapper-body">
-                    <div class="main_block_card_body">
-                        <div class="main_block_card_body_painting">
-                            <img src="../common/images/quadri/MainNotteFHD.jpg" alt="">
-                        </div>
-                        <div class="main_block_card_body_info">
-                            <div class="main_block_card_body_info_description">
-                                <p class="card_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            </div>
-                            <div class="main_block_card_body_info_author">
-                                <p class="card_author">Davinci_Italia</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="wrapper-privare-info">
-                        <div class="price">
-                            <p>Price 15$</p>
-                        </div>
-                        <div class="status-quadro">
-                            <button class="btn_prenotato" type="submit">
-                                <p class="">Prenotato</p>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="main_block">
-
-            <div class="main_block_card">
-                <div class="main_block_card_logo">
-                    <p class="card_logo"> Kebab on the wheel</p>
-                </div>
-                <div class="wrapper-body">
-                    <div class="wrapper-body">
-                        <div class="main_block_card_body">
-                            <div class="main_block_card_body_painting">
-                                <img src="../common/images/quadri/vidomi-kartyni11.jpg" alt="">
-                            </div>
-                            <div class="main_block_card_body_info">
-                                <div class="main_block_card_body_info_description">
-                                    <p class="card_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                            <div class=\"main_block_card_body\">
+                                <div class=\"main_block_card_body_painting\">
+                                    <img src=\"../common/" . str_replace('/', '/quadri/', $currentRecord["path"]) . "\" alt=\"\">
                                 </div>
-                                <div class="main_block_card_body_info_author">
-                                    <p class="card_author">Davinci_Italia</p>
+                                <div class=\"main_block_card_body_info\">
+                                    <div class=\"main_block_card_body_info_description\">
+                                        <p class=\"card_description\">" . $currentRecord["descrizione"] . "</p>
+                                    </div>
+                                    <div class=\"main_block_card_body_info_author\">
+                                        <p class=\"card_author\">" . $currentRecord["autore"] . " (" . $currentRecord["nazionalita"] . ")</p>
+                                    </div>
                                 </div>
                             </div>
+                    
                         </div>
-
                     </div>
-                </div>
-
-            </div>
-        </div>
+                    ";
+            }
+        }
+        ?>
 
         <div class="wrapper-panel">
             <div class="panel">

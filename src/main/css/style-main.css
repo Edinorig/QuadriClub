@@ -1,0 +1,61 @@
+.global_block{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_block
+{
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+}
+
+.main_block_card
+{
+    width: 1100px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.main_block_card_logo{
+    display: flex;
+    justify-content: start;
+}
+
+.main_block_card_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main_block_card_body_painting{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    height: auto;
+    width: 400px;
+}
+
+.main_block_card_body_info{
+    display: flex;
+    flex-direction: column;
+}
+
+.main_block_card_body_info_description{
+    width: 600px;
+    height: 150px;
+}
+
+.main_block_card_body_info_author{
+    width: 600px;
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}

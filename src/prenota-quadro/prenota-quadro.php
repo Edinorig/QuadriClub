@@ -42,7 +42,7 @@
                     <div class="wrapper-body">
                         <div class="main_block_card_body">
                             <div class="main_block_card_body_painting">
-                                <img src="../common/images/quadri/vincent_van_gogh_wheat_field_with_cypresses_wheat_fields_120692_1920x1080.jpg" alt="">
+                                <img src="../common/images/quadri/sunday.jpg" alt="">
                             </div>
                             <div class="main_block_card_body_info">
                                 <div class="main_block_card_body_info_description">

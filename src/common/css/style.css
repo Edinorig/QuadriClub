@@ -66,7 +66,7 @@ input:focus {
     width: 1440px;
     height: 800px;
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.2)), url(../../common/images/quadri/green-wheat-fields-doroga-oblaka-vincent-van-gogh.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.227), rgba(0, 0, 0, 0.2)), url(../../common/images/quadri/field.jpg);
     display: flex;
     flex-direction: column;
 }
