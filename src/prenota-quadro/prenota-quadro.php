@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
-    <link rel="shortcut icon" href="../common/img/icons/icon-logo.png"/>
+    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png"/>
 
     <title>Prenota</title>
 </head>
@@ -42,7 +42,7 @@
                     <div class="wrapper-body">
                         <div class="main_block_card_body">
                             <div class="main_block_card_body_painting">
-                                <img src="../common/img/quadri/vincent_van_gogh_wheat_field_with_cypresses_wheat_fields_120692_1920x1080.jpg" alt="">
+                                <img src="../common/images/quadri/vincent_van_gogh_wheat_field_with_cypresses_wheat_fields_120692_1920x1080.jpg" alt="">
                             </div>
                             <div class="main_block_card_body_info">
                                 <div class="main_block_card_body_info_description">

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="stylesheet" href="./css/style-login.css">
-    <link rel="shortcut icon" href="../common/img/icons/icon-logo.png"/>
+    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png"/>
     <title>Login</title>
 </head>
 
