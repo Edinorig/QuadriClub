@@ -1,0 +1,241 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* ----------------------------------------Header--------------------------------------- */
+
+.global_block {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active {
+    background-color: #272727;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 5.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1px;
+    }
+    to {
+        opacity: 5px;
+    }
+}
+
+.background_main_block {
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+    height: 150px;
+}
+
+.nav_bar_block_logo,
+.nav_bar_block_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_bar_block_logo,
+.nav_bar_menu {
+    margin: 10px;
+}
+
+#background_img1 {
+    width: 1440px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../images/quadri/vidomi-kartyni11.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+#background_img3 {
+    width: 1440px;
+    height: 800px;
+    background-size: cover;
+    background-image: url('../images/quadri/MainNotteFHD.jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+.position_nav_bar {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ----------------------------------------Main--------------------------------------- */
+
+.main_block {
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+}
+
+.main_block_card_body_info,
+.main_block_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_block_card_body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main_block_card_body_info_description {
+    width: 600px;
+    height: 150px;
+}
+
+.main_block_card_body_info_author {
+    width: 600px;
+    height: 150px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.main_block_card_logo {
+    display: flex;
+    justify-content: start;
+}
+
+.main_block_card_body_painting {
+    display: flex;
+    align-items: center;
+}
+
+.main_block_card {
+    width: 1100px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+
+/* ----------------------------------------Footer--------------------------------------- */
+
+.nav_bar_block_logo,
+.footer_block {
+    display: flex;
+    align-items: center
+}
+
+.nav_bar_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel {
+    width: 60px;
+    height: 50px;
+    background: #272727;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+}
+
+.panel:hover {
+    background: #5c5c5c;
+}
+
+.wrapper-panel {
+    justify-content: space-between;
+    display: flex;
+    width: 550px;
+}
+
+.block-filtr {
+    width: 1000px;
+    height: 70px;
+    margin-top: 20px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.filtr-category {
+    width: 153px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #272727;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filtr-category:hover {
+    background-color: #4c4c4c;
+}
+
+.nav-bar-filtr {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.wrapper-privare-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.btn_confirm_quadro {
+    border: 1px solid #FFFFFF;
+    background-color: #272727;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn_confirm_quadro:hover {
+    border: 2px solid #272727;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.btn_confirm:hover {
+    border: 2px solid #272727;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #272727;
+}

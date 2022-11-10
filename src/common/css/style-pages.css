@@ -10,7 +10,7 @@ body {
     width: 1440px;
     height: 800px;
     background-size: cover;
-    background-image: url('../images/field.jpg');
+    background-image: url('../images/quadri/field.jpg');
     display: flex;
     flex-direction: column;
 }

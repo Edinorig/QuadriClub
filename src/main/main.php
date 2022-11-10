@@ -74,14 +74,14 @@ include_once("../common/php/dbConnector.php");
                             </div>
                             <div class=\"main_block_card_body\">
                                 <div class=\"main_block_card_body_painting\">
-                                    <img src=\"../common/" . $currentRecord["path"] . "\" alt=\"\">
+                                    <img src=\"../common/" . str_replace('/', '/quadri/', $currentRecord["path"]) . "\" alt=\"\">
                                 </div>
                                 <div class=\"main_block_card_body_info\">
                                     <div class=\"main_block_card_body_info_description\">
                                         <p class=\"card_description\">" . $currentRecord["descrizione"] . "</p>
                                     </div>
                                     <div class=\"main_block_card_body_info_author\">
-                                        <p class=\"card_author\">" . $currentRecord["autore"] . "</p>
+                                        <p class=\"card_author\">" . $currentRecord["autore"] . " (" . $currentRecord["nazionalita"] . ")</p>
                                     </div>
                                 </div>
                             </div>
