@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="stylesheet" href="./css/style-contact-us.css">
+    <link rel="shortcut icon" href="../common/img/icons/icon-logo.png"/>
     <title>ContactUs</title>
 </head>
 
@@ -34,7 +35,7 @@
 
                 <input type="text" placeholder="Input Poblem" name="login" class="input_contactUs_problem">
                 <textarea name="problem_description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Descript problem"></textarea>
-                <button class="btn_confirm" type="submit">
+                <button class="btn_confirm_contact_us" type="submit">
                     <p class="btn_text">Send</p>
                 </button>
             </form>

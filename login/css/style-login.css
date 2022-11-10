@@ -6,15 +6,11 @@
 #input_password,
 #input_login {
     box-sizing: border-box;
-
     width: 300px;
     height: 50px;
-
     padding: 10px;
     margin-top: 20px;
-
     border: none;
-
     border-radius: 10px;
 }
 
@@ -24,15 +20,11 @@
     background-position: 97% center;
     background-repeat: no-repeat;
     background-color: rgb(255, 255, 255);
-
     padding: none;
     padding: 10px;
-
     width: 280px;
     height: 30px;
-
     border: none;
-
     border-radius: 10px;
 }
 
@@ -43,16 +35,6 @@ a:hover {
 
 input:focus {
     background-color: #e4e4e4;
-
-}
-
-
-.btn_confirm:hover {
-    border: 2px solid #272727;
-    background-color: #ffffff;
-    cursor: pointer;
-
-    color: #272727;
 }
 
 .form_login {
@@ -68,6 +50,9 @@ input:focus {
 }
 
 .login_img {
-
     width: 30px;
+}
+
+.btn_confirm_login {
+    margin-top: 50px;
 }
