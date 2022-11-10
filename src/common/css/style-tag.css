@@ -65,7 +65,7 @@
     width: 1440px;
     height: 800px;
     background-size: cover;
-    background-image: url('../img/quadri/vidomi-kartyni11.jpg');
+    background-image: url('../images/quadri/vidomi-kartyni11.jpg');
     display: flex;
     flex-direction: column;
 }
@@ -74,7 +74,7 @@
     width: 1440px;
     height: 800px;
     background-size: cover;
-    background-image: url('../img/quadri/MainNotteFHD.jpg');
+    background-image: url('../images/quadri/MainNotteFHD.jpg');
     display: flex;
     flex-direction: column;
 }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="stylesheet" href="./css/style-contact-us.css">
-    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png"/>
+    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <title>ContactUs</title>
 </head>
 
@@ -23,7 +23,7 @@
                 </div>
                 <div class="nav_bar_block_menu">
                     <div class="nav_bar_menu">
-                        <p class="nav_bar_info"><a href="../index.php">Exit</a></p>
+                        <p class="nav_bar_info"><a href="../../index.php">Exit</a></p>
                     </div>
                 </div>
             </div>
