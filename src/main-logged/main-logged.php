@@ -1,5 +1,8 @@
 <?php
 include_once("../common/php/dbConnector.php");
+if (!isset($_SESSION['loggedUser'])) {
+    header("location: ../../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +20,8 @@ include_once("../common/php/dbConnector.php");
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <link rel="stylesheet" href="./css/style-main-logged.css">
+    <script src="./javascript/logout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Quadri Club</title>
 </head>
 
@@ -34,7 +39,7 @@ include_once("../common/php/dbConnector.php");
                                 <p class="nav_bar_info"><a href="../contact-us/contact-us.php"> ContactUs </a></p>
                             </div>
                             <div class="nav_bar_menu">
-                                <p class="nav_bar_info"><a href="../login/login.php">LogIn</a></p>
+                                <p class="nav_bar_info"><a href="#" onclick="logout()">Log Out (<?php echo $_SESSION['loggedUser']; ?>)</a></p>
                             </div>
                         </div>
                     </div>
