@@ -100,6 +100,19 @@ include_once("../common/php/dbConnector.php");
                     
                         </div>
                     </div>
+                    <div class=\"wrapper-privare-info\">
+                        <div class=\"price\">
+                            <p>Price 15$</p>
+                        </div>
+                        <div class=\"status-quadro\">
+                            <button class=\"btn_confirm_quadro\" type=\"submit\">
+                                <p class=\"btn_text\">Prenota</p>
+                            </button>
+                            <button class=\"btn_prenotato\" type=\"submit\">
+                                <p class=\"\">Prenotato</p>
+                            </button>
+                        </div>
+                    </div>
                     ";
             }
         }
