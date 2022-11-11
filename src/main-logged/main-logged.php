@@ -1,5 +1,8 @@
 <?php
 include_once("../common/php/dbConnector.php");
+if (!isset($_SESSION['loggedUser'])) {
+    header("location: ../../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

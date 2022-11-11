@@ -28,7 +28,7 @@
                     </div>
                     <div class="wrapper-navigation-menu">
                         <div class="navigation-menu">
-                            <a href="../../index.php">
+                            <a href=<?php echo isset($_SESSION['loggedUser']) ? "../main-logged/main-logged.php" : "../../index.php"; ?>>
                                 <p>Exit</p>
                             </a>
                         </div>
