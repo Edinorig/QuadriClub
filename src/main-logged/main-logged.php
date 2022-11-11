@@ -31,7 +31,7 @@ include_once("../common/php/dbConnector.php");
                         </div>
                         <div class="nav_bar_block_menu">
                             <div class="nav_bar_menu">
-                                <p class="nav_bar_info"><a href="../contact-us/contagitct-us.php"> ContactUs </a></p>
+                                <p class="nav_bar_info"><a href="../contact-us/contact-us.php"> ContactUs </a></p>
                             </div>
                             <div class="nav_bar_menu">
                                 <p class="nav_bar_info"><a href="../login/login.php">LogIn</a></p>
@@ -98,6 +98,19 @@ include_once("../common/php/dbConnector.php");
                                 </div>
                             </div>
                     
+                        </div>
+                    </div>
+                    <div class=\"wrapper-privare-info\">
+                        <div class=\"price\">
+                            <p>Price 15$</p>
+                        </div>
+                        <div class=\"status-quadro\">
+                            <button class=\"btn_confirm_quadro\" type=\"submit\">
+                                <p class=\"btn_text\">Prenota</p>
+                            </button>
+                            <button class=\"btn_prenotato\" type=\"submit\">
+                                <p class=\"\">Prenotato</p>
+                            </button>
                         </div>
                     </div>
                     ";
