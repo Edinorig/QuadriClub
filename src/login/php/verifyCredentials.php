@@ -5,7 +5,9 @@ $pass = $_REQUEST['pass'];
 $userSerch = "SELECT id FROM tutenti WHERE user = '$user' AND pass = '$pass'";
 $searchResult = mysqli_query($dbGdA, $userSerch) or die($userSerch);
 if (mysqli_num_rows($searchResult) > 0) {
-    echo mysqli_fetch_array($searchResult)['id'];
+    $_SESSION['userId'] = mysqli_fetch_array($searchResult)['id'];
+    echo "true";
 } else {
-    echo -1;
+    unset($_SESSION['userId']);
+    echo "false";
 }

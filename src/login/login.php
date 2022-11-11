@@ -12,6 +12,11 @@
     <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <script src="./javascript/verifyCredentials.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../common/lib/alertify/alertify.js"></script>
+    <script src="../common/lib/alertify/alertify.min.js"></script>
+    <script src="../common/lib/shake-element-transform/shake.js"></script>
+    <link rel="stylesheet" href="../common/lib/alertify/css/alertify.min.css" />
+    <link rel="stylesheet" href="../common/lib/alertify/css/themes/default.min.css" />
     <title>Login</title>
 </head>
 

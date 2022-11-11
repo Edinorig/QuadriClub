@@ -8,10 +8,13 @@ function verify() {
         },
         complete: function (id) {
             //console.log(id)
-            if (id.responseText >= 0) {
-                alert(id.responseText);
+            if (id.responseText == "true") {
+                window.location = "../main-logged/main-logged.php";
             } else {
-                alert("failed" + id.responseText);
+                alertify.dismissAll();
+                alertify.notify('Credential Error', 'error', 15, $(function () {
+                    $('#loginForm').children("input").shake()
+                }));
             }
         }
     })
