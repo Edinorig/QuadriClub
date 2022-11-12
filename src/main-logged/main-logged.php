@@ -22,10 +22,18 @@ if (!isset($_SESSION['loggedUser'])) {
     <link rel="stylesheet" href="./css/style-main-logged.css">
     <script src="./javascript/logout.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../common/lib/alertify/alertify.js"></script>
+    <script src="../common/lib/alertify/alertify.min.js"></script>
+    <link rel="stylesheet" href="../common/lib/alertify/css/alertify.min.css" />
+    <link rel="stylesheet" href="../common/lib/alertify/css/themes/default.min.css" />
     <title>Quadri Club</title>
 </head>
 
-<body>
+<body <?php if (isset($_REQUEST['ordered']) && $_REQUEST['ordered'] != "") {
+            echo "onload=\"alertify.success('\\'" . $_REQUEST['ordered'] . "\\' prenotato!', 15) \"";
+            unset($_REQUEST);
+        }; ?>>
+
     <header>
         <div class="background_img fade">
             <div id="background_img1">
@@ -109,16 +117,33 @@ if (!isset($_SESSION['loggedUser'])) {
                         <div class=\"price\">
                             <p>Price 15$</p>
                         </div>
-                        <div class=\"status-quadro\">
-                            <button class=\"btn_confirm_quadro\" type=\"submit\">
+                        <div class=\"status-quadro\">";
+                $availabilityQuery = "SELECT idUtente FROM tprenotazioni WHERE idOpera = '" . $currentRecord['id'] . "'";
+                $prenotazioni = mysqli_query($dbGdA, $availabilityQuery) or die($availabilityQuery);
+                if (mysqli_num_rows($prenotazioni) > 0) {
+                    if (mysqli_fetch_array($prenotazioni)['idUtente'] == $_SESSION['userId']) {
+                        echo "
+                                <button class=\"btn_prenotato\" type=\"submit\">
+                                    <p class=\"\">Prenotato</p>
+                                </button>
+                                ";
+                    } else {
+                        echo "
+                                <button class=\"btn_prenotato\" type=\"submit\">
+                                    <p class=\"\">Non disponibile</p>
+                                </button>
+                                ";
+                    }
+                } else {
+                    echo "<form method=\"post\" action=\"../prenota-quadro/prenota-quadro.php\" id=\"postForm\">
+                            <button class=\"btn_confirm_quadro\" type=\"submit\" name=\"id\" value=\"" . $currentRecord['id'] . "\">
                                 <p class=\"btn_text\">Prenota</p>
-                            </button>
-                            <button class=\"btn_prenotato\" type=\"submit\">
-                                <p class=\"\">Prenotato</p>
-                            </button>
-                        </div>
+                            </button></form>";
+                }
+                echo "           
                     </div>
-                    ";
+                </div>
+                ";
             }
         }
         ?>
