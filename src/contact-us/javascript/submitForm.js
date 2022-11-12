@@ -3,7 +3,7 @@ function submitForm(isLoggedIn) {
         function () { }).setting({
             'closable': false,
             'label': 'Return to home screen',
-            'onok': function () { window.location = /*isLoggedIn ? TODO logged page :*/"../main/main.php"; return false; },
+            'onok': function () { window.location = isLoggedIn ? "../main-logged/main-logged.php" : "../main/main.php"; return false; },
         }
         );
     return false;
