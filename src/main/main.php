@@ -1,6 +1,5 @@
 <?php
 include_once("../common/php/dbConnector.php");
-echo var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
