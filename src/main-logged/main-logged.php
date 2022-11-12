@@ -69,13 +69,29 @@ if (!isset($_SESSION['loggedUser'])) {
 
                 <div class="nav-bar-filtr">
                     <div class="filtr-category">
-                        <p>Nazionalita</p>
+                        <button class="dropbtn">Nazionalita:</button>
+                        <div class="dropdown-content">
+                            <?php
+
+                            echo "<a href=\"#\">Link 1</a>";
+                            ?>
+                        </div>
                     </div>
                     <div class="filtr-category">
-                        <p>Autore</p>
+                        <button class="dropbtn">Autore:</button>
+                        <div class="dropdown-content">
+                            <?php
+
+                            echo "<a href=\"#\">Link 1</a>";
+                            ?>
+                        </div>
                     </div>
                     <div class="filtr-category">
-                        <p>Ordine</p>
+                        <button class="dropbtn">Ordina per:</button>
+                        <div class="dropdown-content">
+                            <a href="#">Ordina alfabeticamente per autore</a>
+                            <a href="#">Ordina per data</a>
+                        </div>
                     </div>
                 </div>
 
