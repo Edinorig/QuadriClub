@@ -22,6 +22,7 @@ if (!isset($_SESSION['loggedUser'])) {
     <link rel="stylesheet" href="./css/style-main-logged.css">
     <script src="./javascript/logout.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../common/javascript/filter.js"></script>
     <script src="../common/lib/alertify/alertify.js"></script>
     <script src="../common/lib/alertify/alertify.min.js"></script>
     <link rel="stylesheet" href="../common/lib/alertify/css/alertify.min.css" />
@@ -68,29 +69,41 @@ if (!isset($_SESSION['loggedUser'])) {
                 <p class="name-filtr">Filtra:</p>
 
                 <div class="nav-bar-filtr">
-                    <div class="filtr-category">
-                        <button class="dropbtn">Nazionalita:</button>
+                    <div class="filtr-category dropdown">
+                        <button class="dropbtn">Nazionalita: <?php echo isset($_REQUEST['nazionalita']) ? $_REQUEST['nazionalita'] : "tutte"; ?></button>
                         <div class="dropdown-content">
+                            <a onclick="applyFilter('nazionalita', '')">Tutte</a>
                             <?php
-
-                            echo "<a href=\"#\">Link 1</a>";
+                            $nazQuery = "SELECT nazionalita FROM tnazionalita";
+                            $nazList = mysqli_query($dbGdA, $nazQuery) or die($nazQuery);
+                            if (mysqli_num_rows($nazList) > 0) {
+                                while ($currentNaz = mysqli_fetch_array($nazList)) {
+                                    echo "<a onclick=\"applyFilter('nazionalita', '" . $currentNaz['nazionalita'] . "')\">" . $currentNaz['nazionalita'] . "</a>";
+                                }
+                            }
                             ?>
                         </div>
                     </div>
-                    <div class="filtr-category">
-                        <button class="dropbtn">Autore:</button>
+                    <div class="filtr-category dropdown">
+                        <button class="dropbtn">Autore: <?php echo isset($_REQUEST['autore']) ? $_REQUEST['autore'] : "tutti"; ?></button>
                         <div class="dropdown-content">
+                            <a onclick="applyFilter('autore', '')">Tutti</a>
                             <?php
-
-                            echo "<a href=\"#\">Link 1</a>";
+                            $autQuery = "SELECT autore FROM tautori";
+                            $autList = mysqli_query($dbGdA, $autQuery) or die($autQuery);
+                            if (mysqli_num_rows($autList) > 0) {
+                                while ($currentAut = mysqli_fetch_array($autList)) {
+                                    echo "<a onclick=\"applyFilter('autore', '" . $currentAut['autore'] . "')\">" . $currentAut['autore'] . "</a>";
+                                }
+                            }
                             ?>
                         </div>
                     </div>
-                    <div class="filtr-category">
-                        <button class="dropbtn">Ordina per:</button>
+                    <div class="filtr-category dropdown">
+                        <button class="dropbtn">Ordina per: <?php echo isset($_REQUEST['ord']) && $_REQUEST['ord'] == "dataIns" ? "data d'inserimento" : "autore"; ?></button>
                         <div class="dropdown-content">
-                            <a href="#">Ordina alfabeticamente per autore</a>
-                            <a href="#">Ordina per data</a>
+                            <a onclick="applyFilter('ord', 'autore')">Autore</a>
+                            <a onclick="applyFilter('ord', 'dataIns')">Data d'inserimento</a>
                         </div>
                     </div>
                 </div>
@@ -100,9 +113,33 @@ if (!isset($_SESSION['loggedUser'])) {
 
 
         <?php
-        $searchTerm = ""; //TODO barra di ricerca
-        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, op.prezzo, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.titolo LIKE '%" . $searchTerm . "%';";
-        //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
+        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, op.prezzo, op.dataIns, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id";
+        if (isset($_REQUEST['autore'])) {
+            $query .= " WHERE ";
+            $query .= "aut.autore = '" . $_REQUEST['autore'] . "'";
+        }
+        if (isset($_REQUEST['nazionalita'])) {
+            if (!str_contains($query, " WHERE ")) {
+                $query .= " WHERE ";
+            } else {
+                $query .= " AND ";
+            }
+            $query .= "naz.nazionalita = '" . $_REQUEST['nazionalita'] . "'";
+        }
+        if (isset($_REQUEST['ord'])) {
+            $query .= " ORDER BY ";
+            switch ($_REQUEST['ord']) {
+                case "autore":
+                    $table = "aut.";
+                    break;
+                case "dataIns":
+                    $table = "op.";
+                    break;
+            }
+            $query .= $table . $_REQUEST['ord'];
+        } else { //default
+            $query .= " ORDER BY op.dataIns";
+        }
         $rec = mysqli_query($dbGdA, $query) or die($query);
         if (mysqli_num_rows($rec) > 0) {
             for ($itemNum = 0; $currentRecord = mysqli_fetch_array($rec); $itemNum++) {
