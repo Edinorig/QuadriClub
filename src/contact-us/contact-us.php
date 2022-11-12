@@ -1,3 +1,6 @@
+<?php
+include_once("../common/php/dbConnector.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,8 +40,7 @@
             </header>
         </div>
         <div class="form_block">
-
-            <form onSubmit="return submitForm(<?php echo isset($_SESSION['userEmail']) ?>)" class="form_contactUs">
+            <form onSubmit="return submitForm(<?php echo isset($_SESSION['loggedUser']) ?>)" class="form_contactUs">
                 <input type="text" placeholder="Insert your reason for contacting us here..." name="reason" class="input_contactUs_problem">
                 <textarea name="description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Add details and information about your situation here..."></textarea>
                 <button class="btn_confirm" type="submit">
