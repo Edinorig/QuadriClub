@@ -65,7 +65,7 @@ if (!isset($_SESSION['loggedUser'])) {
 
         <div class="wrapper-filtr">
             <div class="block-filtr">
-                <p class="name-filtr">Filtr</p>
+                <p class="name-filtr">Filtra:</p>
 
                 <div class="nav-bar-filtr">
                     <div class="filtr-category">
@@ -85,7 +85,7 @@ if (!isset($_SESSION['loggedUser'])) {
 
         <?php
         $searchTerm = ""; //TODO barra di ricerca
-        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.titolo LIKE '%" . $searchTerm . "%';";
+        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, op.prezzo, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.titolo LIKE '%" . $searchTerm . "%';";
         //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
         $rec = mysqli_query($dbGdA, $query) or die($query);
         if (mysqli_num_rows($rec) > 0) {
@@ -115,7 +115,7 @@ if (!isset($_SESSION['loggedUser'])) {
                     </div>
                     <div class=\"wrapper-privare-info\">
                         <div class=\"price\">
-                            <p>Price 15$</p>
+                            <p>Prezzo: " . $currentRecord["prezzo"] . "$</p>
                         </div>
                         <div class=\"status-quadro\">";
                 $availabilityQuery = "SELECT idUtente FROM tprenotazioni WHERE idOpera = '" . $currentRecord['id'] . "'";
