@@ -1,4 +1,5 @@
 function applyFilter(field, value) {
+
     constructedUrl = window.location.href;
     console.log("Field: " + field);
     console.log("Value: " + value);
@@ -8,4 +9,9 @@ function applyFilter(field, value) {
     url = constructedUrl.replace(regex, "");
 
     window.location = url + (value != '' ? (url.includes("?") ? "&" : "?") + field + "=" + value : '');
+    return false;
 }
+
+$(window).on('beforeunload', function () {
+    $(window).scrollTop(0);
+});

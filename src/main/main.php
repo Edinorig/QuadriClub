@@ -16,6 +16,7 @@ include_once("../common/php/dbConnector.php");
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
+    <script src="../common/javascript/filter.js"></script>
     <title>Main</title>
 </head>
 
@@ -61,17 +62,45 @@ include_once("../common/php/dbConnector.php");
 
         <div class="wrapper-filtr">
             <div class="block-filtr">
-                <p class="name-filtr">Filtr</p>
+                <p class="name-filtr">Filtra:</p>
 
                 <div class="nav-bar-filtr">
-                    <div class="filtr-category">
-                        <p>Nazionalita</p>
+                    <div class="filtr-category dropdown">
+                        <button class="dropbtn">Nazionalita: <?php echo isset($_REQUEST['nazionalita']) ? $_REQUEST['nazionalita'] : "tutte"; ?></button>
+                        <div class="dropdown-content">
+                            <a onclick="return applyFilter('nazionalita', '')">Tutte</a>
+                            <?php
+                            $nazQuery = "SELECT nazionalita FROM tnazionalita";
+                            $nazList = mysqli_query($dbGdA, $nazQuery) or die($nazQuery);
+                            if (mysqli_num_rows($nazList) > 0) {
+                                while ($currentNaz = mysqli_fetch_array($nazList)) {
+                                    echo "<a onclick=\"return applyFilter('nazionalita', '" . $currentNaz['nazionalita'] . "')\">" . $currentNaz['nazionalita'] . "</a>";
+                                }
+                            }
+                            ?>
+                        </div>
                     </div>
-                    <div class="filtr-category">
-                        <p>Autore</p>
+                    <div class="filtr-category dropdown">
+                        <button class="dropbtn">Autore: <?php echo isset($_REQUEST['autore']) ? $_REQUEST['autore'] : "tutti"; ?></button>
+                        <div class="dropdown-content">
+                            <a onclick="return applyFilter('autore', '')">Tutti</a>
+                            <?php
+                            $autQuery = "SELECT autore FROM tautori";
+                            $autList = mysqli_query($dbGdA, $autQuery) or die($autQuery);
+                            if (mysqli_num_rows($autList) > 0) {
+                                while ($currentAut = mysqli_fetch_array($autList)) {
+                                    echo "<a onclick=\"return applyFilter('autore', '" . $currentAut['autore'] . "')\">" . $currentAut['autore'] . "</a>";
+                                }
+                            }
+                            ?>
+                        </div>
                     </div>
-                    <div class="filtr-category">
-                        <p>Ordine</p>
+                    <div class="filtr-category dropdown">
+                        <button class="dropbtn">Ordina per: <?php echo isset($_REQUEST['ord']) && $_REQUEST['ord'] == "dataIns" ? "data d'inserimento" : "autore"; ?></button>
+                        <div class="dropdown-content">
+                            <a onclick="return applyFilter('ord', 'autore')">Autore</a>
+                            <a onclick="return applyFilter('ord', 'dataIns')">Data d'inserimento</a>
+                        </div>
                     </div>
                 </div>
 
@@ -79,9 +108,33 @@ include_once("../common/php/dbConnector.php");
         </div>
 
         <?php
-        $searchTerm = ""; //TODO barra di ricerca
-        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.privata = 'n' AND op.titolo LIKE '%" . $searchTerm . "%';";
-        //Sempre ricerca //$query .= isset($_GET["category"]) ? ($_GET["category"]  != "-1" ? "AND idCategoria LIKE '" . $_GET["category"] . "'" : "") : "";
+        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.privata = 'n'";
+        if (isset($_REQUEST['autore'])) {
+            $query .= " WHERE ";
+            $query .= "aut.autore = '" . $_REQUEST['autore'] . "'";
+        }
+        if (isset($_REQUEST['nazionalita'])) {
+            if (!str_contains($query, " WHERE ")) {
+                $query .= " WHERE ";
+            } else {
+                $query .= " AND ";
+            }
+            $query .= "naz.nazionalita = '" . $_REQUEST['nazionalita'] . "'";
+        }
+        if (isset($_REQUEST['ord'])) {
+            $query .= " ORDER BY ";
+            switch ($_REQUEST['ord']) {
+                case "autore":
+                    $table = "aut.";
+                    break;
+                case "dataIns":
+                    $table = "op.";
+                    break;
+            }
+            $query .= $table . $_REQUEST['ord'];
+        } else { //default
+            $query .= " ORDER BY op.dataIns";
+        }
         $rec = mysqli_query($dbGdA, $query) or die($query);
         if (mysqli_num_rows($rec) > 0) {
             for ($itemNum = 0; $currentRecord = mysqli_fetch_array($rec); $itemNum++) {

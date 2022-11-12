@@ -72,13 +72,13 @@ if (!isset($_SESSION['loggedUser'])) {
                     <div class="filtr-category dropdown">
                         <button class="dropbtn">Nazionalita: <?php echo isset($_REQUEST['nazionalita']) ? $_REQUEST['nazionalita'] : "tutte"; ?></button>
                         <div class="dropdown-content">
-                            <a onclick="applyFilter('nazionalita', '')">Tutte</a>
+                            <a onclick="return applyFilter('nazionalita', '')">Tutte</a>
                             <?php
                             $nazQuery = "SELECT nazionalita FROM tnazionalita";
                             $nazList = mysqli_query($dbGdA, $nazQuery) or die($nazQuery);
                             if (mysqli_num_rows($nazList) > 0) {
                                 while ($currentNaz = mysqli_fetch_array($nazList)) {
-                                    echo "<a onclick=\"applyFilter('nazionalita', '" . $currentNaz['nazionalita'] . "')\">" . $currentNaz['nazionalita'] . "</a>";
+                                    echo "<a onclick=\"return applyFilter('nazionalita', '" . $currentNaz['nazionalita'] . "')\">" . $currentNaz['nazionalita'] . "</a>";
                                 }
                             }
                             ?>
@@ -87,13 +87,13 @@ if (!isset($_SESSION['loggedUser'])) {
                     <div class="filtr-category dropdown">
                         <button class="dropbtn">Autore: <?php echo isset($_REQUEST['autore']) ? $_REQUEST['autore'] : "tutti"; ?></button>
                         <div class="dropdown-content">
-                            <a onclick="applyFilter('autore', '')">Tutti</a>
+                            <a onclick="return applyFilter('autore', '')">Tutti</a>
                             <?php
                             $autQuery = "SELECT autore FROM tautori";
                             $autList = mysqli_query($dbGdA, $autQuery) or die($autQuery);
                             if (mysqli_num_rows($autList) > 0) {
                                 while ($currentAut = mysqli_fetch_array($autList)) {
-                                    echo "<a onclick=\"applyFilter('autore', '" . $currentAut['autore'] . "')\">" . $currentAut['autore'] . "</a>";
+                                    echo "<a onclick=\"return applyFilter('autore', '" . $currentAut['autore'] . "')\">" . $currentAut['autore'] . "</a>";
                                 }
                             }
                             ?>
@@ -102,8 +102,8 @@ if (!isset($_SESSION['loggedUser'])) {
                     <div class="filtr-category dropdown">
                         <button class="dropbtn">Ordina per: <?php echo isset($_REQUEST['ord']) && $_REQUEST['ord'] == "dataIns" ? "data d'inserimento" : "autore"; ?></button>
                         <div class="dropdown-content">
-                            <a onclick="applyFilter('ord', 'autore')">Autore</a>
-                            <a onclick="applyFilter('ord', 'dataIns')">Data d'inserimento</a>
+                            <a onclick="return applyFilter('ord', 'autore')">Autore</a>
+                            <a onclick="return applyFilter('ord', 'dataIns')">Data d'inserimento</a>
                         </div>
                     </div>
                 </div>
