@@ -21,6 +21,7 @@ if (!isset($_SESSION['loggedUser'])) {
     <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <link rel="stylesheet" href="./css/style-main-logged.css">
     <script src="./javascript/logout.js"></script>
+    <script src="./javascript/addClick.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../common/javascript/filter.js"></script>
     <script src="../common/lib/alertify/alertify.js"></script>
@@ -36,7 +37,7 @@ if (!isset($_SESSION['loggedUser'])) {
         }; ?>>
 
     <header>
-        <div class="background_img">
+        <div class="background_img fade">
             <div id="background_img1">
                 <div class="nav_bar_block">
                     <div class="nav_bar">
@@ -54,7 +55,7 @@ if (!isset($_SESSION['loggedUser'])) {
                     </div>
                 </div>
                 <div class="background_main_block">
-                    <p class="slider-main-info">QuadriClub</p>
+                    <p class="header_first_inf">QuadriClub</p>
                     <br>
                     <p class="slider-secondary-info">Migliori quadri per i migliri amici</p>
                 </div>
@@ -113,7 +114,7 @@ if (!isset($_SESSION['loggedUser'])) {
 
 
         <?php
-        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, op.prezzo, op.dataIns, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id";
+        $query = "SELECT op.id, op.titolo, op.descrizione, op.path, op.prezzo, op.dataIns, op.click, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id";
         if (isset($_REQUEST['autore'])) {
             $query .= " WHERE ";
             $query .= "aut.autore = '" . $_REQUEST['autore'] . "'";
@@ -189,7 +190,7 @@ if (!isset($_SESSION['loggedUser'])) {
                     }
                 } else {
                     echo "<form method=\"post\" action=\"../prenota-quadro/prenota-quadro.php\" id=\"postForm\">
-                            <button class=\"btn_confirm_quadro\" type=\"submit\" name=\"id\" value=\"" . $currentRecord['id'] . "\">
+                            <button class=\"btn_confirm_quadro\" type=\"submit\" name=\"id\" value=\"" . $currentRecord['id'] . "\" onclick=\"addClick(" . $currentRecord['id'] . ", " . $currentRecord["click"] . ")\">
                                 <p class=\"btn_text\">Prenota</p>
                             </button></form>";
                 }
@@ -201,16 +202,14 @@ if (!isset($_SESSION['loggedUser'])) {
         }
         ?>
 
-        
-
     </div>
 
     <footer>
         <div class="footer_block">
-            <p class="footer-info">Email: infoQuadr.gmail.com</p>
+            <p class="footer_info">Email: infoQuadr.gmail.com</p>
         </div>
         <div class="footer_block">
-            <p class="footer-info">Telefono: +39 123 324 4759</p>
+            <p class="footer_info">Telefono: +39 123 324 4759</p>
         </div>
     </footer>
 </body>

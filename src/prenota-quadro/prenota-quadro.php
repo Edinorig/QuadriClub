@@ -15,7 +15,6 @@ if (!isset($_SESSION['loggedUser']) || !isset($_REQUEST['id'])) {
     <link rel="stylesheet" href="../common/css/style.css">
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
-    <link rel="stylesheet" href="../common/css/style-pages.css">
     <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <script src="./javascript/prenota.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -36,7 +35,7 @@ if (mysqli_num_rows($rec) > 0) {
 ?>
 
 <body>
-    <div class="background_img"style="height: 100vh;">
+    <div class="background_img" style="height: 100vh;">
         <div id="background_img2-prenota" style="background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../common/<?php echo str_replace('/', '/quadri/', $currentRecord["path"]); ?>);">
 
             <div class="nav_bar_block">
