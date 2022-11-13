@@ -202,15 +202,6 @@ if (!isset($_SESSION['loggedUser'])) {
         }
         ?>
 
-        <div class="wrapper-panel">
-            <div class="panel">
-                <p>Prev</p>
-            </div>
-            <div class="panel">
-                <p>Next</p>
-            </div>
-        </div>
-
     </div>
 
     <footer>
