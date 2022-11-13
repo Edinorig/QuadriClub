@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
-
 p {
     font-family: 'Dosis';
     font-style: normal;
-
     margin: 0px;
+}
+
+.nav_bar_logo {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
 }
 
 a {
@@ -22,13 +26,26 @@ a:hover {
     font-size: 30px;
 }
 
+.btn_text:hover {
+    color: #1d1d1d;
+}
+
+.btn_cancella {}
+
+.navigation-menu-contactus {
+    color: #1d1d1d;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 5px;
+}
+
 .navigation-menu {
     color: white;
     font-weight: 400;
     font-size: 20px;
-
     padding: 5px;
 }
+
 
 /*  ----------------------------------------------------SLIDER------------------------------------------- */
 
@@ -46,6 +63,7 @@ a:hover {
     font-size: 17px;
 }
 
+
 /*  ----------------------------------------------------CARDS------------------------------------------- */
 
 .card_logo {
@@ -57,8 +75,8 @@ a:hover {
     color: #272727;
 }
 
-/*  ----------------------------------------------------CONTACTUS------------------------------------------- */
 
+/*  ----------------------------------------------------CONTACTUS------------------------------------------- */
 
 .btn_text {
     display: flex;
@@ -71,11 +89,12 @@ a:hover {
     font-size: 17px;
 }
 
+
 /*  ----------------------------------------------------FOOTER------------------------------------------- */
+
 .footer-info {
     padding: 10px;
     color: white;
-
     display: flex;
     align-items: center;
 }

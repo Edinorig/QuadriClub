@@ -28,7 +28,6 @@
     from {
         opacity: 1px;
     }
-
     to {
         opacity: 5px;
     }
@@ -91,7 +90,7 @@
 .main_block {
     display: flex;
     justify-content: center;
-    width: 1400px;
+    align-content: center;
 }
 
 .main_block_card_body_info,
@@ -104,6 +103,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 .main_block_card_body_info_description {
@@ -113,7 +113,7 @@
 
 .main_block_card_body_info_author {
     width: 600px;
-    height: 150px;
+    height: 75px;
     display: flex;
     justify-content: end;
     align-items: end;
@@ -126,31 +126,36 @@
 
 .main_block_card_body_painting {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .main_block_card {
     width: 1100px;
-    height: 400px;
+    height: 340px;
     margin-top: 20px;
 }
 
+
 /* Dropdown Button */
+
 .dropbtn {
     color: #f1f1f1;
-    padding: 16px;
     font-size: 16px;
     border: none;
 }
 
+
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
     position: relative;
     color: #f1f1f1;
     display: inline-block;
 }
 
+
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -160,7 +165,9 @@
     z-index: 1;
 }
 
+
 /* Links inside the dropdown */
+
 .dropdown-content a {
     color: #272727;
     padding: 12px 16px;
@@ -168,20 +175,27 @@
     display: block;
 }
 
+
 /* Change color of dropdown links on hover */
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
+
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+
 /* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
     background-color: #272727;
 }
+
 
 /* ----------------------------------------Footer--------------------------------------- */
 
@@ -258,6 +272,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
+    width: 1040px;
 }
 
 .price {

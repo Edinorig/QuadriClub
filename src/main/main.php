@@ -166,15 +166,6 @@ include_once("../common/php/dbConnector.php");
 
     </div>
 
-    <div class="wrapper-panel">
-        <div class="panel">
-            <p>Prev</p>
-        </div>
-        <div class="panel">
-            <p>Next</p>
-        </div>
-    </div>
-
     <?php include '../common/php/footer.php'; ?>
 
 </body>

@@ -30,7 +30,7 @@ include_once("../common/php/dbConnector.php");
                         <p>Quadri club</p>
                     </div>
                     <div class="wrapper-navigation-menu">
-                        <div class="navigation-menu">
+                        <div class="navigation-menu-contactus">
                             <a href=<?php echo isset($_SESSION['loggedUser']) ? "../main-logged/main-logged.php" : "../../index.php"; ?>>
                                 <p>Exit</p>
                             </a>
@@ -38,8 +38,7 @@ include_once("../common/php/dbConnector.php");
                     </div>
                 </div>
             </header>
-        </div>
-        <div class="form_block">
+            <div class="form_block">
             <form onSubmit="return submitForm(<?php echo isset($_SESSION['loggedUser']) ?>)" class="form_contactUs">
                 <input type="text" placeholder="Insert your reason for contacting us here..." name="reason" class="input_contactUs_problem">
                 <textarea name="description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Add details and information about your situation here..."></textarea>
@@ -49,8 +48,8 @@ include_once("../common/php/dbConnector.php");
             </form>
 
         </div>
+        </div>
     </div>
-    <?php include '../common/php/footer.php'; ?>
 </body>
 
 </html>
