@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="wrapper-header-bacground-img">
+    <div class="wrapper-header-bacground-img" style="height: 100vh;">
 
         <div id="background_img2">
 

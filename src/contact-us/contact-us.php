@@ -23,7 +23,7 @@ include_once("../common/php/dbConnector.php");
 </head>
 
 <body>
-    <div class="wrapper-header-bacground-img">
+    <div class="wrapper-header-bacground-img" style="height: 100vh;">
         <div class="background-img1">
             <header>
                 <div class="wrapper-nav-bar">

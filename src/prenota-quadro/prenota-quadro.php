@@ -36,7 +36,7 @@ if (mysqli_num_rows($rec) > 0) {
 ?>
 
 <body>
-    <div class="background_img">
+    <div class="background_img"style="height: 100vh;">
         <div id="background_img2-prenota" style="background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../common/<?php echo str_replace('/', '/quadri/', $currentRecord["path"]); ?>);">
 
             <div class="nav_bar_block">
