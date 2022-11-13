@@ -33,7 +33,7 @@
                     </div>
                     <div class="nav_bar_block_menu">
                         <div class="nav_bar_menu">
-                            <p class="nav_bar_info"><a href="../../index.php">Exit</a></p>
+                            <p class="nav_bar_info"><a href="../../index.php">Esci</a></p>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                     <input type="text" placeholder="Input username" name="login" id="input_login" class="input-dati" style="margin-top: 110px;">
                     <input type="password" placeholder="Input password" id="input_password" name="password" class="input-dati">
                     <button class="btn_confirm_login" type="submit" style="margin-top: 40px;">
-                        <p class="btn_text">Submit</p>
+                        <p class="btn_text">Invia</p>
                     </button>
                 </form>
 
