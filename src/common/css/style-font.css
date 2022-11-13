@@ -26,11 +26,21 @@ a:hover {
     font-size: 30px;
 }
 
-.btn_text:hover {
+
+/* .btn_text:hover {
     color: #1d1d1d;
+} */
+
+.btn_confirm:hover {
+    border: 1px solid #272727;
+    background-color: #fff;
+    color: #272727;
+    cursor: pointer;
 }
 
-.btn_cancella {}
+.btn_text:hover {
+    color: #272727;
+}
 
 .navigation-menu-contactus {
     color: #1d1d1d;

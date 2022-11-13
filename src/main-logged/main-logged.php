@@ -57,7 +57,7 @@ if (!isset($_SESSION['loggedUser'])) {
                 <div class="background_main_block">
                     <p class="header_first_inf">QuadriClub</p>
                     <br>
-                    <p class="header_second_inf">Best Paintings For Best Friends</p>
+                    <p class="slider-secondary-info">Migliori quadri per i migliri amici</p>
                 </div>
             </div>
         </div>

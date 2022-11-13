@@ -45,7 +45,7 @@ if (mysqli_num_rows($rec) > 0) {
                     </div>
                     <div class="nav_bar_block_menu">
                         <div class="nav_bar_menu">
-                            <p class="nav_bar_info"><a href="../main-logged/main-logged.php"> Exit </a></p>
+                            <p class="nav_bar_info"><a href="../main-logged/main-logged.php"> Esci </a></p>
                         </div>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ include_once("../common/php/dbConnector.php");
                 </div>
                 <div class="wrapper-secondary-info">
                     <div class="secondary-info">
-                        <p class="slider-secondary-info">Best Paintings For Best Friends</p>
+                        <p class="slider-secondary-info">Migliori quadri per i migliri amici</p>
                     </div>
                 </div>
 

@@ -13,6 +13,7 @@ include_once("../common/php/dbConnector.php");
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-header.css">
     <link rel="stylesheet" href="../common/css/style-footer.css">
+    <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <script src="javascript/submitForm.js"></script>
     <script src="../common/lib/alertify/alertify.js"></script>
     <script src="../common/lib/alertify/alertify.min.js"></script>
@@ -32,7 +33,7 @@ include_once("../common/php/dbConnector.php");
                     <div class="wrapper-navigation-menu">
                         <div class="navigation-menu-contactus">
                             <a href=<?php echo isset($_SESSION['loggedUser']) ? "../main-logged/main-logged.php" : "../../index.php"; ?>>
-                                <p>Exit</p>
+                                <p>Esci</p>
                             </a>
                         </div>
                     </div>
@@ -40,10 +41,10 @@ include_once("../common/php/dbConnector.php");
             </header>
             <div class="form_block">
             <form onSubmit="return submitForm(<?php echo isset($_SESSION['loggedUser']) ?>)" class="form_contactUs">
-                <input type="text" placeholder="Insert your reason for contacting us here..." name="reason" class="input_contactUs_problem">
-                <textarea name="description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Add details and information about your situation here..."></textarea>
+                <input type="text" placeholder="Inserisci la problema..." name="reason" class="input_contactUs_problem" style="padding: 5px;">
+                <textarea name="description" id="" cols="30" rows="10" class="input_contactUs_description" placeholder="Aggiungi i detagli ..."></textarea>
                 <button class="btn_confirm" type="submit">
-                    <p class="btn_text">Send</p>
+                    <p class="btn_text">Invia</p>
                 </button>
             </form>
 
