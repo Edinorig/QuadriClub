@@ -59,6 +59,7 @@ a:hover {
 
 /*  ----------------------------------------------------SLIDER------------------------------------------- */
 
+.header_first_inf,
 .slider-main-info {
     color: white;
     font-weight: normal;
@@ -102,7 +103,8 @@ a:hover {
 
 /*  ----------------------------------------------------FOOTER------------------------------------------- */
 
-.footer-info {
+.footer-info,
+.footer_info {
     padding: 10px;
     color: white;
     display: flex;
