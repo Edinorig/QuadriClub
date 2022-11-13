@@ -110,15 +110,13 @@ include_once("../common/php/dbConnector.php");
         <?php
         $query = "SELECT op.id, op.titolo, op.descrizione, op.path, aut.autore, naz.nazionalita, op.idAutore, aut.idNazionalita FROM topere op INNER JOIN tautori aut ON op.idAutore = aut.id INNER JOIN tnazionalita naz ON aut.idNazionalita = naz.id WHERE op.privata = 'n'";
         if (isset($_REQUEST['autore'])) {
-            $query .= " WHERE ";
+            $query .= " AND ";
             $query .= "aut.autore = '" . $_REQUEST['autore'] . "'";
         }
         if (isset($_REQUEST['nazionalita'])) {
-            if (!str_contains($query, " WHERE ")) {
-                $query .= " WHERE ";
-            } else {
-                $query .= " AND ";
-            }
+
+            $query .= " AND ";
+
             $query .= "naz.nazionalita = '" . $_REQUEST['nazionalita'] . "'";
         }
         if (isset($_REQUEST['ord'])) {
