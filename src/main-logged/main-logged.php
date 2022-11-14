@@ -11,12 +11,12 @@ if (!isset($_SESSION['loggedUser'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style-main.css">
     <link rel="stylesheet" href="../common/css/style-pages.css">
     <link rel="stylesheet" href="../common/css/style-font.css">
     <link rel="stylesheet" href="../common/css/style-header.css">
     <link rel="stylesheet" href="../common/css/style-footer.css">
     <link rel="stylesheet" href="../common/css/style.css">
+    <link rel="stylesheet" href="../main/css/style-main.css">
     <link rel="stylesheet" href="../common/css/style-tag.css">
     <link rel="shortcut icon" href="../common/images/icons/icon-logo.png" />
     <link rel="stylesheet" href="./css/style-main-logged.css">
