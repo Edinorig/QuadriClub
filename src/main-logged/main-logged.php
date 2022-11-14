@@ -195,13 +195,12 @@ if (!isset($_SESSION['loggedUser'])) {
                                 <p class=\"btn_text\">Prenota</p>
                             </button></form>";
                 }
-                echo "    
-                </div>   
-                </div>    
+                echo "
+                </div>       
                 </div>";
             }
         } else {
-            echo "echo <div id=\"no-results\"><h2> <p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></h2></div>";
+            echo "<div id=\"no-results\"><p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></div>";
         }
         ?>
 
