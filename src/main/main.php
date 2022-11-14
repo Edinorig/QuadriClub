@@ -161,6 +161,8 @@ include_once("../common/php/dbConnector.php");
                     </div>
                     ";
             }
+        } else {
+            echo "<div id=\"no-results\"><p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></div>";
         }
         ?>
 
