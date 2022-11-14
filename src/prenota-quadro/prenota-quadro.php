@@ -66,7 +66,7 @@ if (mysqli_num_rows($rec) > 0) {
 
                             <div class=\"main_block_card\">
                                 <div class=\"main_block_card_logo info\">
-                                    <p class=\"card_logo\">" . $currentRecord["titolo"] . "</p>
+                                    <p class=\"card_logo_prenota\">" . $currentRecord["titolo"] . "</p>
                                 </div>
                                 <div class=\"main_block_card_body\">
                                     <div class=\"main_block_card_body_painting\">
@@ -74,10 +74,10 @@ if (mysqli_num_rows($rec) > 0) {
                                     </div>
                                     <div class=\"main_block_card_body_info info\">
                                         <div class=\"main_block_card_body_info_description\">
-                                            <p class=\"card_description\">" . $currentRecord["descrizione"] . "</p>
+                                            <p class=\"card_description_prenota\">" . $currentRecord["descrizione"] . "</p>
                                         </div>
                                         <div class=\"main_block_card_body_info_author info\">
-                                            <p class=\"card_author\">" . $currentRecord["autore"] . " (" . $currentRecord["nazionalita"] . ")</p>
+                                            <p class=\"card_author_prenota\">" . $currentRecord["autore"] . " (" . $currentRecord["nazionalita"] . ")</p>
                                         </div>
                                     </div>
                                 </div>

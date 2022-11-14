@@ -18,8 +18,6 @@ a {
     color: white;
 }
 
-.btn_text {}
-
 a:hover {
     color: #1d1d1d;
 }
@@ -113,4 +111,18 @@ a:hover {
     color: white;
     display: flex;
     align-items: center;
+}
+
+.card_logo_prenota {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    padding: 6px;
+    margin-left: 20px;
+    color: #ffffff;
+}
+
+.card_author_prenota,
+.card_description_prenota {
+    color: white;
 }
