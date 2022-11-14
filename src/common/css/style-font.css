@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&display=swap');
+textarea,
+input,
 p {
     font-family: 'Dosis';
     font-style: normal;
@@ -15,6 +17,8 @@ a {
     text-decoration: none;
     color: white;
 }
+
+.btn_text {}
 
 a:hover {
     color: #1d1d1d;

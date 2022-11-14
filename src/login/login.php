@@ -44,7 +44,7 @@
                 <form id="loginForm" onsubmit="return verify()" class="form_login">
                     <input type="text" placeholder="Input username" name="login" id="input_login" class="input-dati" style="margin-top: 110px;">
                     <input type="password" placeholder="Input password" id="input_password" name="password" class="input-dati">
-                    <button class="btn_confirm_login" type="submit" style="margin-top: 40px;">
+                    <button class="btn_confirm_quadro" type="submit" style="margin-top: 40px;">
                         <p class="btn_text">Invia</p>
                     </button>
                 </form>
