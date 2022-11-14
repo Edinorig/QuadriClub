@@ -163,7 +163,10 @@ if (!isset($_SESSION['loggedUser'])) {
                                         <p class=\"card_author\">" . $currentRecord["autore"] . " (" . $currentRecord["nazionalita"] . ")</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
+                        </div>
+                        </div>  
+                        
                     
                     <div class=\"wrapper-privare-info\">
                         <div class=\"price\">
@@ -192,10 +195,9 @@ if (!isset($_SESSION['loggedUser'])) {
                                 <p class=\"btn_text\">Prenota</p>
                             </button></form>";
                 }
-                echo "           
-                    </div>
-                </div>
-                </div>
+                echo "    
+                </div>   
+                </div>    
                 </div>";
             }
         }

@@ -132,3 +132,8 @@ a:hover {
     height: 340px;
     margin-top: 80px;
 }
+
+.btn_confirm_quadro:hover {
+    background: #ffffff;
+    cursor: pointer;
+}
