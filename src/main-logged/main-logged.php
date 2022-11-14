@@ -200,7 +200,7 @@ if (!isset($_SESSION['loggedUser'])) {
                 </div>";
             }
         } else {
-            echo "<div id=\"no-results\"><p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></div>";
+            echo "<div id=\"no-results\"><h2><p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></h2></div>";
         }
         ?>
 
