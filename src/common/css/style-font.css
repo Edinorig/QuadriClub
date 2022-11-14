@@ -137,3 +137,13 @@ a:hover {
     background: #ffffff;
     cursor: pointer;
 }
+
+.wrapper-privare-info_quadro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 1040px;
+    margin-left: 25px;
+    margin-top: 40px;
+}

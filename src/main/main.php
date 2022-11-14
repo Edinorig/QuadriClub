@@ -162,11 +162,12 @@ include_once("../common/php/dbConnector.php");
                     ";
             }
         } else {
-            echo "<div id=\"no-results\"><p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></div>";
+            echo "<div id=\"no-results\"><h4> <p>Non sono state trovate opere disponibili corrispondenti ai criteri di ricerca inseriti...</p></h4></div>";
         }
         ?>
 
     </div>
+    
 
     <?php include '../common/php/footer.php'; ?>
 
