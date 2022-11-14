@@ -126,3 +126,9 @@ a:hover {
 .card_description_prenota {
     color: white;
 }
+
+.main_block_card_logged {
+    width: 1100px;
+    height: 340px;
+    margin-top: 80px;
+}

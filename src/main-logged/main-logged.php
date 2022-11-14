@@ -147,7 +147,7 @@ if (!isset($_SESSION['loggedUser'])) {
                 echo "
                     <div class=\"main_block\">
                     
-                        <div class=\"main_block_card\">
+                        <div class=\"main_block_card_logged\">
                             <div class=\"main_block_card_logo\">
                                 <p class=\"card_logo\">" . $currentRecord["titolo"] . "</p>
                             </div>
@@ -165,8 +165,6 @@ if (!isset($_SESSION['loggedUser'])) {
                                 </div>
                             </div>
                     
-                        </div>
-                    </div>
                     <div class=\"wrapper-privare-info\">
                         <div class=\"price\">
                             <p>Prezzo: " . $currentRecord["prezzo"] . "$</p>
@@ -197,7 +195,8 @@ if (!isset($_SESSION['loggedUser'])) {
                 echo "           
                     </div>
                 </div>
-                ";
+                </div>
+                </div>";
             }
         }
         ?>
